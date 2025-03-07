@@ -17,4 +17,5 @@ class AnnonceSeeder extends Seeder
         Annonce::factory(10)->create();
 
     }
+    
 }

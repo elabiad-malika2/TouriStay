@@ -51,12 +51,13 @@ class User extends Authenticatable
     public function role(){
         return $this->belongsTo(Role::class , 'role_id');
     }
+    
     public function getRedirectPath()
     {
         $routes = [
             'admin' => '/admin',
             'owner' => '/owner',
-            'touriste' => '/touriste',
+            'tourist' => '/touriste',
         ];
 
         return $routes[$this->role->name] ?? '/';

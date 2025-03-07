@@ -9,6 +9,8 @@ use App\Models\User;
 class Annonce extends Model
 {
     use HasFactory;
+    protected $guarded= [];
+
     public function owner(){
         return $this->belongsTo(User::class, 'user_id'); 
     }
